@@ -1,10 +1,15 @@
+/*
+ * Copyright (c) 2020. Witalij Bukatkin
+ * Github profile: https://github.com/witalijbukatkin
+ */
+
 package ru.argustelecom.task.witalijbukatkin.entity;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public abstract class NamedEntity extends BaseEntity{
+public abstract class NamedEntity extends BaseEntity {
     @Column(unique = true)
     private String name;
 

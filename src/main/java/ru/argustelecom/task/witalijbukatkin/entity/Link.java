@@ -1,12 +1,15 @@
+/*
+ * Copyright (c) 2020. Witalij Bukatkin
+ * Github profile: https://github.com/witalijbukatkin
+ */
+
 package ru.argustelecom.task.witalijbukatkin.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Link extends BaseEntity{
+public class Link extends BaseEntity {
     @ManyToOne
     private Connector sourceConnector;
     private int sourcePoint;

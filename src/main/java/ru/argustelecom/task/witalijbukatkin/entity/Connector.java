@@ -1,10 +1,15 @@
+/*
+ * Copyright (c) 2020. Witalij Bukatkin
+ * Github profile: https://github.com/witalijbukatkin
+ */
+
 package ru.argustelecom.task.witalijbukatkin.entity;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Connector extends NamedEntity{
+public class Connector extends NamedEntity {
     @ManyToOne
     private Node node;
 

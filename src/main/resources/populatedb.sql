@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2020. Witalij Bukatkin
+ * Github profile: https://github.com/witalijbukatkin
+ */
+
 ALTER SEQUENCE hibernate_sequence RESTART 10000;
 
 INSERT INTO NODE VALUES (1, 'Узел1', '18', 'СПб', 'Марата');
