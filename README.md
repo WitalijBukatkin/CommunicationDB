@@ -12,10 +12,10 @@ Point identify number in connector (from zero)
 Link defined two points deference connectors:
 ` SourcePoint, TargetPoint, SourceConnector, TargetConnector`
 
-####Task:
+#### Task:
 Develop entity beans, connect with jpa annotations
 
-####Result in
+#### Result in
 - Entity package as source files.
 - Example populate database with temp data.
 
