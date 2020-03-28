@@ -60,10 +60,10 @@ public class Link extends BaseEntity{
     @Override
     public String toString() {
         return "Link{" +
-                "sourceConnector=" + sourceConnector +
-                ", targetConnector=" + targetConnector +
-                ", sourcePoint=" + sourcePoint +
+                "sourcePoint=" + sourcePoint +
                 ", targetPoint=" + targetPoint +
+                ", sourceConnector=" + sourceConnector +
+                ", targetConnector=" + targetConnector +
                 '}';
     }
 }

@@ -28,7 +28,7 @@ public class Main {
                             .getResultList()
                             .forEach(System.out::println);
 
-                    System.out.println("\n\n");
+                    System.out.println("\n");
                 });
     }
 }
