@@ -1,32 +1,27 @@
 package ru.argustelecom.task.witalijbukatkin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @Entity
-public class Node extends BaseEntity {
-    private String name;
+public class Node extends NamedEntity {
     private String region;
     private String street;
-    private int house;
+    private String house;
 
-    public Node(long id, String name, String region, String street, int house) {
-        super(id);
-        this.name = name;
+    @OneToMany(mappedBy = "node")
+    private Set<Connector> connectors;
+
+    public Node(long id, String name, String region, String street, String house, Set<Connector> connectors) {
+        super(id, name);
         this.region = region;
         this.street = street;
         this.house = house;
+        this.connectors = connectors;
     }
 
     public Node(){
-        super(null);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getRegion() {
@@ -45,11 +40,29 @@ public class Node extends BaseEntity {
         this.street = street;
     }
 
-    public int getHouse() {
+    public String getHouse() {
         return house;
     }
 
-    public void setHouse(int house) {
+    public void setHouse(String house) {
         this.house = house;
+    }
+
+    public Set<Connector> getConnectors() {
+        return connectors;
+    }
+
+    public void setConnectors(Set<Connector> connectors) {
+        this.connectors = connectors;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "name=" + getName() +
+                ", region='" + region + '\'' +
+                ", street='" + street + '\'' +
+                ", house=" + house +
+                '}';
     }
 }
