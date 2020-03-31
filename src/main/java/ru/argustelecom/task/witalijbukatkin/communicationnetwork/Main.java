@@ -3,25 +3,23 @@
  * Github profile: https://github.com/witalijbukatkin
  */
 
-package ru.argustelecom.task.witalijbukatkin;
+package ru.argustelecom.task.witalijbukatkin.communicationnetwork;
 
-import ru.argustelecom.task.witalijbukatkin.entity.Connector;
-import ru.argustelecom.task.witalijbukatkin.entity.Link;
-import ru.argustelecom.task.witalijbukatkin.entity.Node;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Connector;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Link;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Node;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.util.EntityManagerUtil;
 
 import java.util.stream.Stream;
-
-import static ru.argustelecom.task.witalijbukatkin.util.EntityManagerUtil.getEntityManager;
-import static ru.argustelecom.task.witalijbukatkin.util.EntityManagerUtil.shutdown;
 
 public class Main {
 
     public static void main(String[] args) {
-        if(getEntityManager().isOpen()) {
+        if(EntityManagerUtil.getEntityManager().isOpen()) {
             run();
         }
 
-        shutdown();
+        EntityManagerUtil.shutdown();
     }
 
     public static void run(){
@@ -29,7 +27,7 @@ public class Main {
                 .forEach(type -> {
                     System.out.println("------- " + type.getSimpleName().toUpperCase() + " --------");
 
-                    getEntityManager()
+                    EntityManagerUtil.getEntityManager()
                             .createQuery("FROM " + type.getSimpleName(), type)
                             .getResultList()
                             .forEach(System.out::println);

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.argustelecom.task.witalijbukatkin</groupId>
-    <artifactId>CommunicationDB</artifactId>
+    <artifactId>DB</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -53,7 +53,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>ru.argustelecom.task.witalijbukatkin.Main</mainClass>
+                                    <mainClass>ru.argustelecom.task.witalijbukatkin.communicationnetwork.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
