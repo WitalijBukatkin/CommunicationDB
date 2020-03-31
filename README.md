@@ -25,5 +25,6 @@ Populate DB is `resources/populatedb.sql`
 ```
 git clone http://github.com/witalijbukatkin/communicationdb
 mvn package
+cd communicationdb
 java -jar target/*-jar-with-dependencies.jar
 ```
