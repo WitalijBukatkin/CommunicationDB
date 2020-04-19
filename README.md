@@ -1,5 +1,7 @@
 ### Communication DB
 
+[Task Description](https://github.com/WitalijBukatkin/CommunicationDB/wiki/Task-Description)
+
 Describe communication network as jpa objects:
 - Node, consist of connectors as router.
 - Connector is cable device, consist of points as router board.
